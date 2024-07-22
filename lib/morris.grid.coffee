@@ -36,20 +36,20 @@ class Morris.Grid extends Morris.EventEmitter
     @setData @options.data
 
     # hover
-    @el.bind 'mousemove', (evt) =>
+    @el.on 'mousemove', (evt) =>
       offset = @el.offset()
       @fire 'hovermove', evt.pageX - offset.left, evt.pageY - offset.top
 
-    @el.bind 'mouseout', (evt) =>
+    @el.on 'mouseout', (evt) =>
       @fire 'hoverout'
 
-    @el.bind 'touchstart touchmove touchend', (evt) =>
+    @el.on 'touchstart touchmove touchend', (evt) =>
       touch = evt.originalEvent.touches[0] or evt.originalEvent.changedTouches[0]
       offset = @el.offset()
       @fire 'hover', touch.pageX - offset.left, touch.pageY - offset.top
       touch
 
-    @el.bind 'click', (evt) =>
+    @el.on 'click', (evt) =>
       offset = @el.offset()
       @fire 'gridclick', evt.pageX - offset.left, evt.pageY - offset.top
 

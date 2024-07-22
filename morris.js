@@ -93,22 +93,22 @@
         this.init();
       }
       this.setData(this.options.data);
-      this.el.bind('mousemove', function(evt) {
+      this.el.on('mousemove', function(evt) {
         var offset;
         offset = _this.el.offset();
         return _this.fire('hovermove', evt.pageX - offset.left, evt.pageY - offset.top);
       });
-      this.el.bind('mouseout', function(evt) {
+      this.el.on('mouseout', function(evt) {
         return _this.fire('hoverout');
       });
-      this.el.bind('touchstart touchmove touchend', function(evt) {
+      this.el.on('touchstart touchmove touchend', function(evt) {
         var offset, touch;
         touch = evt.originalEvent.touches[0] || evt.originalEvent.changedTouches[0];
         offset = _this.el.offset();
         _this.fire('hover', touch.pageX - offset.left, touch.pageY - offset.top);
         return touch;
       });
-      this.el.bind('click', function(evt) {
+      this.el.on('click', function(evt) {
         var offset;
         offset = _this.el.offset();
         return _this.fire('gridclick', evt.pageX - offset.left, evt.pageY - offset.top);
