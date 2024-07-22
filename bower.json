@@ -5,8 +5,8 @@
     "./morris.css"
   ],
   "dependencies": {
-    "jquery": ">= 1.7.0",
-    "raphael": ">= 2.0"
+    "jquery": "1.7 - 2.1",
+    "raphael": "2.0 - 2.1"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
