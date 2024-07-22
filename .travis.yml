@@ -7,7 +7,7 @@ before_script:
   - "cp -f bower.travis.json bower.json"
   - 'sed -i -e "s/JQUERY/$JQUERY/" bower.json'
   - 'sed -i -e "s/RAPHAEL/$RAPHAEL/" bower.json'
-  - "./node_modules/.bin/bower install"
+  - "bower install"
 env:
   - JQUERY="~> 1.7.0" RAPHAEL="~> 2.0.0"
   - JQUERY="~> 1.8.0" RAPHAEL="~> 2.0.0"
