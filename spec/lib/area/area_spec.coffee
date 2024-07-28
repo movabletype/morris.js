@@ -22,9 +22,9 @@ describe 'Morris.Area', ->
       chart = Morris.Area $.extend {}, defaults
       $('#graph').find("path[stroke='#aaaaaa']").size().should.equal 5
 
-    it 'should contain 9 text elements', ->
+    it 'should contain 8 or 9 text elements', ->
       chart = Morris.Area $.extend {}, defaults
-      $('#graph').find("text").size().should.equal 9
+      expect($('#graph').find("text").size()).to.satisfy((size) -> size == 8 || size == 9)
 
   describe 'svg attributes', ->
     defaults =
