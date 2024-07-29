@@ -4,7 +4,6 @@ node_js:
   - 10
 before_script:
   - "npm install -g grunt-cli"
-  - "npm install"
   - "cp -f bower.travis.json bower.json"
   - 'sed -i -e "s/JQUERY/$JQUERY/" bower.json'
   - 'sed -i -e "s/RAPHAEL/$RAPHAEL/" bower.json'
