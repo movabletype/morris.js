@@ -29,7 +29,7 @@
     "bower": "1.3.8"
   },
   "scripts": {
-    "postinstall": "sed -i s/unlink/unlinkSync/ node_modules/grunt-lib-phantomjs/lib/phantomjs.js",
+    "postinstall": "sed -i \"s/.unlink(/.unlinkSync(/\" node_modules/grunt-lib-phantomjs/lib/phantomjs.js",
     "test": "grunt concat coffee mocha"
   },
   "engines": {
